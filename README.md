@@ -7,6 +7,7 @@
 A lightweight microservice designed to push real-time IAM events to clients using HTTP long polling and Redis. Built with Java, Spring Boot, and Docker.
 
 ⚙️ Features
+
 ✅ Long Polling endpoint for real-time IAM event delivery
 
 ✅ Redis used for user-specific event queues
@@ -41,12 +42,12 @@ Pushes a new event for a specific user.
 
 Request Body:
 
-json
-Copy
-Edit
+`
 {
   "event": "You were added to Admin group"
 }
+`
+
 GET /events/{userId}
 Client polls for new events.
 
@@ -84,10 +85,8 @@ Integration with Kafka or RabbitMQ for scaling
 🚀 Getting Started
 Start Redis:
 
-bash
-Copy
-Edit
-docker run -d --name redis -p 6379:6379 redis
+
+`docker run -d --name redis -p 6379:6379 redis`
 Run the Spring Boot app
 
 Test it with:
